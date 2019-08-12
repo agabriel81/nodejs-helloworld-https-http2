@@ -8,4 +8,9 @@ const server = http.createServer((request, response) => {
 const port = process.env.PORT || 1337;
 server.listen(port);
 
-console.log("Server running at http://localhost:%d", port);
+var os = require('os');
+os.hostname();
+
+console.log("Server running at http://"os":%d", port);
+
+
