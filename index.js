@@ -11,6 +11,6 @@ server.listen(port);
 var os = require('os');
 os.hostname();
 
-console.log("Server running at http://"os.hostname":%d", port);
+console.log("Server running at http://"os.hostname()":%d", port);
 
 
