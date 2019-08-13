@@ -2,8 +2,8 @@ var os = require("os");
 var hostname = os.hostname();
 
 const fs = require('fs')
-
 const https = require('https')
+const app = express()
 
 app.get('/', (req, res) => {
   res.send('Hello HTTPS from ' + hostname)
