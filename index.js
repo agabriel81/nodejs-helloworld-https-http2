@@ -1,10 +1,10 @@
 var os = require("os");
 var hostname = os.hostname();
 var express = require('express');
+var app = express();
 
 const fs = require('fs')
 const https = require('https')
-const app = express();
 
 app.get('/', (req, res) => {
   res.send('Hello HTTPS from ' + hostname)
@@ -16,6 +16,4 @@ https.createServer({
 }, app).listen(3000, () => {
   console.log('Listening...')
 })
-
-
 
