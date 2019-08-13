@@ -3,8 +3,8 @@ var hostname = os.hostname();
 var https = require('https');
 var fs = require('fs');
 var https_options = {
-  key: fs.readFileSync("server.key"),
-  cert: fs.readFileSync("server.crt"),
+  key: fs.readFileSync("/opt/app-root/src/server.key"),
+  cert: fs.readFileSync("/opt/app-root/src/server.crt"),
 
 };
  
