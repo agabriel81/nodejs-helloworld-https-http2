@@ -11,7 +11,7 @@ var https_options = {
        ]
 };
  
-https.createServer(options, function (req, res) {
+https.createServer(function (req, res) {
  res.writeHead(200);
  res.end("Welcome to Node.js HTTPS Server" + hostname);
 
