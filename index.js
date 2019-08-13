@@ -13,6 +13,6 @@ var https_options = {
  
 https.createServer(https_options, function (req, res) {
  res.writeHead(200);
- res.end("Welcome to Node.js HTTPS Server" + hostname);
+ res.end("Welcome to Node.js HTTPS Server : " + hostname);
 
 }).listen(8443)
