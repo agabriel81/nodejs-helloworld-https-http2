@@ -1,16 +1,21 @@
 var os = require("os");
 var hostname = os.hostname();
 
-const http = require('http');
+const fs = require('fs')
 
-const server = http.createServer((request, response) => {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World from " + hostname);
-});
+const https = require('https')
+const app = express()
 
-const port = process.env.PORT || 8080;
-server.listen(port);
+app.get('/', (req, res) => {
+  res.send('Hello HTTPS' + hostname)
+})
 
-console.log("Server running at http://localhost:%d", port);
+https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app).listen(3000, () => {
+  console.log('Listening...')
+})
+
 
 
