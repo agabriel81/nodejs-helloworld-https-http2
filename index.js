@@ -1,9 +1,8 @@
-var express = require('express')
-var fs = require('fs')
-var https = require('https')
 var os = require("os");
 var hostname = os.hostname();
-var app = express()
+const app = require('express')();
+const https = require('https');
+const fs = require('fs');
 
 app.get('/', function (req, res) {
   res.send('hello world from ' + hostname)
