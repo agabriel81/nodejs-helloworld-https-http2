@@ -1,4 +1,5 @@
 const http2 = require('http2');
+const fs = require('fs');
 const options = {
   key: fs.readFileSync("/opt/app-root/certificate/tls.key"),
   cert: fs.readFileSync("/opt/app-root/certificate/tls.crt"),
