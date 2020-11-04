@@ -1,4 +1,4 @@
-var http2 = require('http2');
+var https2 = require('https2');
 var os = require("os");
 var hostname = os.hostname();
 var https = require('https');
