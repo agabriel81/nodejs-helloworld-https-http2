@@ -1,3 +1,4 @@
+var http2 = require('http2');
 var os = require("os");
 var hostname = os.hostname();
 var https = require('https');
@@ -11,7 +12,7 @@ var https_options = {
        ]
 };
  
-https.createServer(https_options, function (req, res) {
+https2.createServer(https_options, function (req, res) {
  res.writeHead(200);
  res.end("Welcome to Node.js HTTPS Server : " + hostname);
 
